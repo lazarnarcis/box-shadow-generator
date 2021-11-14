@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Box Shadow Generator
+        link(rel="shortcut icon", href="box-shadow-logo.png", type="image/x-icon")
+        link(rel="stylesheet", href="style.css")
+    body 
+        #project 
+            h3 Box Shadow CSS Generator
+            #boxGenerator
+            #console 
+                #alignDiv
+                    span Change Color
+                    input(type="color", id="color", onchange="color()", oninput="color()", value="#31b8f2")
+                #alignDiv 
+                    span Shift right
+                    input(type="range", id="shiftRight", onchange="shiftRight()", oninput="shiftRight()", min="-50", max="50", value="5")
+                #alignDiv 
+                    span Shift down
+                    input(type="range", id="shiftDown", onchange="shiftDown()", oninput="shiftDown()", min="-50", max="50", value="5")
+                #alignDiv 
+                    span Blur
+                    input(type="range", id="blur", onchange="blurFunction()", oninput="blurFunction()", value="5", min="0", max="50")
+                #alignDiv 
+                    span Spread
+                    input(type="range", id="spread", onchange="spread()", oninput="spread()", value="0", min="-30", max="50")
+                #alignDiv 
+                    span Opacity
+                    input(type="range", id="opacity", onchange="opacity()", oninput="opacity()", min="0.00", max="1.0", value="1.0", step="0.01")
+                #alignDiv 
+                    span Inset
+                    input(type="checkbox" id="check", onchange="check(this.value)")
+                #results 
+                    h3 CSS Code
+                    b 
+                        p#result
+                    span#copy Copy the result!
+        script(src="script.js") 
